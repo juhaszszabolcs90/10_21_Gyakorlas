@@ -22,9 +22,15 @@ Feladat: Számold ki egy adott szám faktoriálisát!
 
 Ha az adott szám 5, a faktoriálisa: 5! = 5 × 4 × 3 × 2 × 1 = 120
 """
-szam = 5
+def masodik_feladat():
+	szam = 7
+	faktorialis = 1
 
-for i in range(1, szam +1):
+	for i in range(1, szam +1):
+		faktorialis *= i
+
+	print(faktorialis)
+
 
 
 """
@@ -36,6 +42,16 @@ Ha az adott szám 10:
 Átlag: 55 ÷ 10 = 5.5
 """
 
+def harmadik_feladat():
+	n_szam = 12
+	osszeg = 0
+
+	for i in range(1, n_szam + 1):
+		osszeg = osszeg + i
+
+	atlag = osszeg / n_szam
+	print(f"{n_szam} szám átlaga: {atlag}")
+
 """
 4. Egymásba ágyazott for ciklusok: szorzótábla megjelenítése
 Feladat: Készítsd el az 1-től 10-ig tartó szorzótáblát!
@@ -46,6 +62,16 @@ Szorzótábla 1-től 10-ig:
 ...
 10 × 1 = 10, 10 × 2 = 20, ..., 10 × 10 = 100
 """
+def negyedik_feladat():
+	# szam1 = 1
+	# for i in range(1, 11):
+	# 	print(f"{szam1} x {i} = {szam1 * i}")
+
+	for i in range(1, 11):
+		for j in range(1, 11):
+			print(f"{i} x {j} = {i * j}", end="   ")
+		print()
+
 
 """
 5. Fibonacci-sorozat generálása
@@ -55,3 +81,6 @@ Fibonacci-sorozat első 10 száma: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34
 """
 
 # elso_feladat()
+# masodik_feladat()
+# harmadik_feladat()
+negyedik_feladat()
