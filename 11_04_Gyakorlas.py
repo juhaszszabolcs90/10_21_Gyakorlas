@@ -25,11 +25,23 @@ def masodik_feladat():
 3. Számok listázása és összegzése
 Írj egy programot, amely bekér  n számot a felhasználótól, majd egy while ciklussal megkérdezi a felhasználót, hogy szeretne-e újabb számot megadni. Addig folytassa a program a számok bekérését, amíg a felhasználó igennel válaszol. A program végén jelenítse meg a bekért számok összegét.
 b) jelenítse meg a bekért számokat (lista használata)
-
-
 """
+def harmadik_feladat():
+    user_num_input = int(input("kérlek adj meg egy számot! "))
+    # numbers = []
+    running = True
 
+    while running:
+        user_continue_input = input("Szeretnéd-e folytatni a játékot? (i/n) ").upper()
+        if user_continue_input == "I":
+            user_next_num_input = int(input("kérlek add meg a következő számot! "))
+            user_num_input += user_next_num_input
+        else:
+            running = False
 
+    print(user_num_input)
+
+harmadik_feladat()
 """
 4. Két szám közötti számok
 Kérj be két számot a felhasználótól (a és b). Írasd ki az összes számot a és b között.
